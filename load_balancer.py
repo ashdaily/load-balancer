@@ -84,7 +84,7 @@ class LoadBalancer:
 
                 backend_server_domain = routing_to_this_server[0]
                 backend_server_port = routing_to_this_server[1]
-                logging.info(f"Server chosen is {backend_server_domain}:{backend_server_port}")
+                logging.info(f"Request served by backend_server -> {backend_server_domain}:{backend_server_port}")
 
                 client_handler = ClientHandler(client_socket, routing_to_this_server)
                 client_handler.start()
